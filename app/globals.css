@@ -1012,7 +1012,7 @@ h1, h2, h3, p { margin: 0; }
 .classi-teams { font-size: 12px; color: #5059c9; font-weight: 700; text-decoration: none; }
 .classi-teams-vuoto { color: var(--text-faint); font-weight: 400; }
 .classi-form { display: flex; flex-direction: column; gap: 6px; }
-.classi-form input { border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 12px; font-family: inherit; }
+.classi-form input, .classi-form select { border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 12px; font-family: inherit; }
 .classi-form button[type="submit"] { align-self: flex-start; border: none; background: var(--accent); color: #fff; border-radius: 8px; padding: 7px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; }
 
 /* Allenamenti: import Apple Salute */

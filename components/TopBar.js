@@ -6,7 +6,6 @@ const SCREENS = [
   { id: "home", label: "Home" },
   { id: "scuola", label: "Scuola" },
   { id: "salute", label: "Salute" },
-  { id: "finanze", label: "Finanze" },
 ];
 
 // "Svago" non apre subito una schermata come le altre voci: apre un menu a

@@ -6,7 +6,6 @@ import CaptureBar from "./CaptureBar";
 import HomeScreen from "./screens/HomeScreen";
 import ScuolaScreen from "./screens/ScuolaScreen";
 import SaluteScreen from "./screens/SaluteScreen";
-import FinanzeScreen from "./screens/FinanzeScreen";
 import ReviewScreen from "./screens/ReviewScreen";
 import SvagoViaggioScreen from "./screens/SvagoViaggioScreen";
 import SvagoWatchlistScreen from "./screens/SvagoWatchlistScreen";
@@ -41,7 +40,6 @@ export default function Dashboard() {
         {active === "home" && <HomeScreen googleCalendarEsito={googleCalendarEsito} />}
         {active === "scuola" && <ScuolaScreen />}
         {active === "salute" && <SaluteScreen />}
-        {active === "finanze" && <FinanzeScreen />}
         {active === "review" && <ReviewScreen />}
         {active === "svago-viaggio" && <SvagoViaggioScreen />}
         {active === "svago-watchlist" && <SvagoWatchlistScreen />}

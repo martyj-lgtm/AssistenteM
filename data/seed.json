@@ -20,7 +20,6 @@
   "memoria": [],
   "registro": [],
   "aggiornamenti": null,
-  "finanza": { "spese": [] },
   "salute": { "pesoLog": [], "allenamenti": [], "riassunto": null },
   "review": { "ultimoRiassunto": null },
   "scuola": {

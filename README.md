@@ -24,7 +24,6 @@ Apri http://localhost:3000.
   elenco classi con link Teams.
 - **Salute**: riassunto (pulsante), pasti, peso con grafico, allenamenti con
   importazione da Apple Salute (file `export.zip`), andamento 30 giorni.
-- **Finanze**: lista spese con totali del mese e per categoria.
 - **Svago**: Viaggio, Watch list, Libri, Uscite con gli amici (liste con
   suggeritore IA), Notizie (rassegna solo sugli argomenti scelti), Trend moda.
 - **Review** e **Impostazioni** (nome, backup JSON).

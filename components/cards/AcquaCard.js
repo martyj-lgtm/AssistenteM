@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from "react";
 
-// Messaggi di incoraggiamento in base alla percentuale di bicchieri bevuti
+// Un bicchiere standard è conteggiato come 250 ml.
+const ML_PER_BICCHIERE = 250;
+
+// Messaggi di incoraggiamento in base alla percentuale di acqua bevuta
 // rispetto all'obiettivo del giorno: l'ultimo che "passa" la soglia vince.
 const MESSAGGI = [
   { soglia: 0, testo: "Comincia la giornata con un bicchiere d'acqua! 💧" },
   { soglia: 0.01, testo: "Bravo, continua così: un bicchiere ogni ora è un buon ritmo." },
-  { soglia: 0.5, testo: "A metà strada! Un altro bicchiere e sei quasi all'obiettivo." },
+  { soglia: 0.5, testo: "A metà strada! Ancora qualche bicchiere e sei quasi all'obiettivo." },
   { soglia: 0.99, testo: "Ci sei quasi, manca pochissimo!" },
   { soglia: 1, testo: "Obiettivo raggiunto: giornata idratata! 🎉" },
 ];
@@ -80,6 +83,8 @@ export default function AcquaCard() {
 
   const bicchieri = data.log[habit.id] || 0;
   const obiettivo = habit.obiettivo || 8;
+  const ml = bicchieri * ML_PER_BICCHIERE;
+  const obiettivoMl = obiettivo * ML_PER_BICCHIERE;
   const pct = Math.min(1, bicchieri / obiettivo);
   const completato = bicchieri >= obiettivo;
 
@@ -116,7 +121,10 @@ export default function AcquaCard() {
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <span style={{ fontWeight: 700, fontVariantNumeric: "tabular-nums" }}>
-          {bicchieri} / {obiettivo} bicchieri
+          {ml} / {obiettivoMl} ml
+        </span>
+        <span style={{ color: "var(--text-muted)", fontSize: 12 }}>
+          ({bicchieri} / {obiettivo} bicchieri)
         </span>
         <button
           type="button"
@@ -132,7 +140,7 @@ export default function AcquaCard() {
             cursor: "pointer",
           }}
         >
-          {completato ? "Ricomincia" : "+ un bicchiere"}
+          {completato ? "Ricomincia" : `+ ${ML_PER_BICCHIERE} ml`}
         </button>
       </div>
     </section>

@@ -15,9 +15,6 @@ const AMBITI_SVAGO = [
   { id: "svago-viaggio", label: "Viaggio" },
   { id: "svago-watchlist", label: "Watch list" },
   { id: "svago-libri", label: "Libri" },
-  { id: "svago-posti", label: "Uscite con gli amici" },
-  { id: "svago-notizie", label: "Notizie" },
-  { id: "svago-moda", label: "Trend moda" },
 ];
 
 const SCREENS_DOPO_SVAGO = [
